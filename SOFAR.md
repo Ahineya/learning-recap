@@ -249,3 +249,73 @@ const myConsole = {
 
 myConsole.log("Hello, world!"); // Hello, world!
 ```
+
+## Functions
+
+10 Jan 2026
+
+So, today we learned much more about functions.
+
+Function is one more type of data in JavaScript. It can be assigned to a variable, passed as an argument to another function, or returned from a function.
+
+```javascript
+const add = (a, b) => {
+  return a + b;
+}
+
+const result = add(2, 3);
+console.log(result); // 5
+```
+
+We define a function using the fat arrow syntax. On the left side of the arrow, we specify inputs to the function:
+
+```
+(a, b) =>
+```
+
+Meaning, that our function will take two inputs (called "arguments").
+
+On the right side of the arrow, we specify the "body" of the function — basically, what our function will do:
+
+```
+=> {
+  return a + b;
+}
+```
+
+And, of course, to use it, we need to assign it to a variable:
+
+```javascript
+const addTwoNumbers = (a, b) => {
+  return a + b;
+}
+```
+
+Now, addTwoNumbers contains our function. Remember, this is just a named behavior — it does not do anything until we "call" it.
+
+To call a function, we need to use the variable name that contains our function, and pass the inputs to it in parentheses "()":
+
+```javascript
+const result = addTwoNumbers(2, 3);
+console.log(result); // 5
+```
+
+And check this out:
+
+```javascript
+const justFunction = addTwoNumbers; // Here we don't call the function, we just put it in a variable "justFunction"
+
+const result = addTwoNumbers(2, 3); // And here we call the function using the variable name
+const result2 = justFunction(2, 3); // And here we call the function using another variable name
+```
+
+Since we can put functions in variables, we also can pass functions as arguments to other functions:
+
+```javascript
+const logResult = (func, a, b) => {
+  const result = func(a, b);
+  console.log(result);
+}
+
+logResult(addTwoNumbers, 2, 3); // 5
+```
