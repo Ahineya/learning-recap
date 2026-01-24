@@ -1,0 +1,60 @@
+<svg width="1000" height="1000">
+    <path
+      d="M 45,788 L 456,75 L 679,54 L 47,874 L 45,788"
+      fill="none"
+      stroke="black"
+    ></path>
+</svg>
+
+
+<script>
+    const robot = {
+        "x": 45,
+        "y": 788,
+        "path": []
+    }
+
+    const goToPoint = (x, y) => {
+        const point = {
+            "x": x,
+            "y": y
+        }
+
+        robot.path.push(point)
+    }
+
+    goToPoint(456, 75)
+    goToPoint(679, 54)
+    goToPoint(47, 874)
+    goToPoint(45, 788)
+
+
+
+
+
+
+
+
+
+
+    
+    let path = ""
+    path = "M " + robot.x + "," + robot.y
+   
+
+    // const point = {"x": 1, "y": 1}
+
+    // path = path + " L " + point.x + "," + point.y
+
+
+    robot.path.forEach((point) => {
+
+     path = path + " L " + point.x + "," + point.y
+
+    })
+
+    console.log(path)
+
+
+    console.log(robot)
+</script>

@@ -1,0 +1,42 @@
+<script>
+    const menuItem = {
+        "name":"korca",
+        "price": 300
+    }
+
+    const menuItem2 = {
+        "name": "Bud",
+        "price": 350
+    }
+
+    const menuItem3 = {
+        "name": "Elbar",
+        "price": 400
+    }
+
+    const menu = [
+        menuItem, menuItem2, menuItem3, menuItem
+    ]
+    
+    // const menu = []
+    // menu.push(menuItem)
+    // menu.push(menuItem2)
+    // menu.push(menuItem3)
+
+
+    // console.log(menu[0])
+    // console.log(menu[1])
+    // console.log(menu[2])
+
+    let totalPrice = 0
+
+    menu.forEach((menuItem) => {
+
+        // console.log(menuItem)
+        totalPrice = totalPrice + menuItem.price
+    })
+
+    console.log(totalPrice)
+
+    console.log(menu)
+</script>

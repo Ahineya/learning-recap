@@ -1,0 +1,63 @@
+<script>
+    const addTwoNumbers = (a, b) => {
+        return a + b
+    }
+
+    const addThreeNumbers = (a, b, c) => {
+        // return a + b + c
+        // return a + addTwoNumbers(b, c)
+        // return addTwoNumbers(    a,          addTwoNumbers(b, c)   )
+        return addTwoNumbers(    addTwoNumbers(a, b),      c          )
+    }
+
+    const result = addTwoNumbers(3,4)
+    
+    console.log(result)
+
+    const result2 = addTwoNumbers(5, result)
+    console.log(result2)
+
+
+    const result3 = addTwoNumbers(56, result)
+    console.log(result3)
+
+
+    const result4 = addTwoNumbers(result, result2)
+    console.log(result4)
+
+    const result5 = addTwoNumbers(1, addTwoNumbers(2, 3))
+    console.log(result5)
+
+    const result7 = addThreeNumbers(4, addTwoNumbers(5,6), addTwoNumbers(6,7))
+    console.log(result7)
+
+
+    const legoTruck = {
+        "id": "lego",
+        "sum": addTwoNumbers(1, 2),
+        "add": addTwoNumbers,
+    }
+
+    console.log(legoTruck.id)
+    console.log(legoTruck.add(1,2))
+    console.log(legoTruck)
+
+    const rr = legoTruck.add(5, 6)
+
+
+    const addTwoNumbers2 = addTwoNumbers
+    const a = 2
+
+
+
+
+    
+    const calculate = (operation, a, b) => {
+        return operation(a, b)
+    }
+
+    const result8 = calculate(addTwoNumbers, 2, 3)
+    
+    console.log(result8)
+
+</script>

@@ -1,0 +1,61 @@
+<script>
+
+//     const beer = {
+//         "id": "korca",
+//         "name": "Korca",
+//         "price": 300,
+//     }
+
+// const beer2 = beer
+
+
+// const beerName = beer.name
+
+const CreateObject = (a, b,) => {
+
+    return {
+        "id": a,
+        "name": b
+    }
+}
+
+const cat = CreateObject("cat", "Orange")
+console.log(cat)
+
+const MenuItem = (id, name, price, shape, color) => {
+    return {
+        "id": id,
+        "name": name,
+        "price": price,
+        "shape": shape,
+        "color": color
+    }
+}
+                     
+const korca = MenuItem("korca", "Korca", 300, "shape", "red")
+const bud = MenuItem("bud", "Bud", 400, "shape", "color")
+
+
+korca.price = 350
+korca.color = "blue"
+bud.shape = "triangle"
+
+console.log(korca)
+console.log(bud)
+console.log(korca.name)
+console.log(korca.price)
+console.log(korca.shape)
+console.log(bud.color)
+console.log(korca.color)
+
+
+
+
+const sum = "Name: " + korca.name
+const sum2 = "Price: " + korca.price
+
+console.log(sum) 
+console.log(sum2)
+console.log(document)
+
+</script>
