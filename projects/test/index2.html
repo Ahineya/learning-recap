@@ -1,0 +1,67 @@
+<script>
+
+// Data
+
+const menu = [
+    {
+        "name":"Moreti",
+        "price":300
+    },
+    {
+        "name":"Amstel",
+        "price":400
+    },
+    {
+        "name":"Asahi",
+        "price":500
+    }
+]
+
+
+// Functions
+
+const addItemToOrder = (order, item) => {
+    order.push(item)
+}
+
+const calculateTotal = (order) => {
+    let totalPrice = 0
+
+    order.forEach((order) => {
+        totalPrice = totalPrice + order.price
+    })
+
+    return totalPrice
+}
+
+const main = () => {
+    const order = []
+
+    addItemToOrder(order, menu[2])
+    addItemToOrder(order, menu[1])
+    addItemToOrder(order, menu[1])
+    addItemToOrder(order, menu[1])
+
+    const total = calculateTotal(order)
+
+    console.log(order)
+    console.log(total)
+}
+
+
+// Flow
+// console.log(menu)
+
+main()
+
+// Sending to server
+// fetch("http://192.168.0.108:3000/order", {
+//     method: 'POST',
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(order)
+// })
+//     .then(r => r.json())
+//     .then(r => console.log(r))
+</script>
