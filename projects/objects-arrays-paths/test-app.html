@@ -1,0 +1,65 @@
+<script>
+    const answer = {
+        id: "5"
+        text: "5",
+    }
+
+    const question = {
+        text: "which answer is right"?
+    }
+
+    const questionWithAnswers = {
+        question,
+        answers: [
+            answer,
+            answer
+        ],
+        correctAnswerId: "5"
+    }
+
+    const test = [
+        questionWithAnswers,
+        questionWithAnswers,
+        questionWithAnswers,
+        questionWithAnswers
+    ]
+
+    const testState = {
+        currentQuestion: 2,
+        answerIds: ["5", "2"]
+    }
+
+    const now = test[testState.currentQuestion].question.text
+    test[testState.currentQuestion].answers.forEach((item) => {
+        console.log(item.text)
+    })
+
+
+    // ----
+
+    const answer = {
+        id: 1,
+        text: "5"
+    }
+
+    const answer = {
+        id: 3,
+        text: "Small Momma"
+    }
+
+    const question = {
+        id: 1,
+        text: "Is something?"
+    }
+
+    const questionWithAnswers = {
+        questionId: 1,
+        answerIds: [1, 2, 3, 4]
+    }
+
+    const correctAnswer = {
+        questionId: 1,
+        answerId: 3
+    }
+
+</script>

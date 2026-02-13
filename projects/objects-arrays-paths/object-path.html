@@ -1,0 +1,31 @@
+<script>
+
+    const obj = {
+        "key": 1,
+        "propName": "sdfsdfsdf",
+        "another": {
+            "anotherKey": 2,
+            "different": {
+                "poop": "bad"
+            }
+        }
+    }
+
+    const value = obj.propName // "sdfsdfsdf"
+
+    const value2 = obj.another // {"anotherKey": 2, "different": {.......}}
+    value2.anotherKey // 2
+
+
+    const value3 = obj.another.anotherKey // 2
+
+
+    const value4 = obj.another.different.poop
+
+
+    const o = {
+        "anotherKey": 2
+    }
+
+    o.anotherKey
+</script>

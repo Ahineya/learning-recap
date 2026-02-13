@@ -1,0 +1,92 @@
+<script>
+    const arr = ["a", "b", "c"]
+    // const arr1 = [1, 2, 3]
+
+    const item = arr[0] // "a"
+    const item2 = arr[1] // "b"
+
+    const arr2 = [
+        {"id": "a"},     // 0
+        {"id": "b"},     // 1
+        {"id": "c"}      // 2
+    ]
+
+    const c = arr2[2] // {"id": "c"}
+
+    const c2 = arr2[2].id
+
+    const idioticArr = [
+        {
+            "key": 1,
+            "propName": "sdfsdfsdf",
+            "another": {
+                "anotherKey": 2,
+                "different": {
+                    "poop": "bad"
+                }
+            }
+        }
+    ]
+
+    const idiotFind = idioticArr[0].another.anotherKey // 2
+
+    const obj = {
+        "items": [
+            {
+                "id": "korca",
+                "price": 400
+            },
+            {
+                "id": "bud",
+                "price": 500
+            }
+        ]
+    }
+
+    const budPrice = obj.items[1].price // 500
+
+    const arr3 = [
+        ["a", "b", "c"],           // 0
+        ["d", "e", "Big Momma"]    // 1
+    ]
+
+    arr3.length // 2
+    const a3 = arr3[1][2] // "Big Momma"
+
+    const secondElem = arr3[1] // ["d", "e", "Big Momma"]
+    const momma = secondElem[2]
+
+
+
+    /*
+    {
+      "propName": "sdfsdfsdf",
+      "key": 1,
+      "another": {
+        "anotherKey": 2,
+        "different": {
+          "poop": "bad"
+        }
+      }
+    }
+    */
+    const myBigObj = idioticArr[0]
+
+    const q1 = myBigObj.another.anotherKey // 2
+    const q11 = myBigObj["another"]["anotherKey"] // 2
+    const q12 = myBigObj["another"].anotherKey // 2
+
+    const str = "another"
+
+    const q13 = myBigObj[str].anotherKey // 2
+
+    const arrObj = {
+        0: "a",
+        1: "b",
+        2: "c"
+    }
+
+    arrObj.length // undefined
+
+    const q2 = arrObj[1] // "b"
+</script>
