@@ -8,6 +8,9 @@
 
 
 <script>
+
+    // A code to draw with a robot
+
     const robot = {
         "x": 45,
         "y": 788,
@@ -27,34 +30,14 @@
     goToPoint(679, 54)
     goToPoint(47, 874)
     goToPoint(45, 788)
-
-
-
-
-
-
-
-
-
-
     
     let path = ""
     path = "M " + robot.x + "," + robot.y
-   
-
-    // const point = {"x": 1, "y": 1}
-
-    // path = path + " L " + point.x + "," + point.y
-
 
     robot.path.forEach((point) => {
-
      path = path + " L " + point.x + "," + point.y
-
     })
 
     console.log(path)
-
-
     console.log(robot)
 </script>
