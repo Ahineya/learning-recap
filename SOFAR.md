@@ -173,7 +173,7 @@ Accessing array elements:
 
 To access array element, we use square brackets, and specify the element index starting from 0:
 
-```
+```javascript
 const alice = people[0]
 ```
 
@@ -297,7 +297,7 @@ Arrow syntax:
 
 On the left side of the arrow, we specify inputs to the function:
 
-```
+```javascript
 (a, b) =>
 ```
 
@@ -305,7 +305,7 @@ Meaning, that our function will take two inputs (called "arguments").
 
 On the right side of the arrow, we specify the "body" of the function — basically, what our function will do:
 
-```
+```javascript
 => {
   return a + b;
 }
@@ -355,7 +355,7 @@ logResult(addTwoNumbers, 2, 3); // 5
 #### `.forEach`
 `.forEach` allows us to execute some function for each element in the array:
 
-```
+```javascript
 const array = [0, 1, 2, 3]
 
 array.forEach( (item) => {
@@ -365,7 +365,7 @@ array.forEach( (item) => {
 
 Or, with already declared function:
 
-```
+```javascript
 const array = [0, 1, 2, 3]
 
 function print(num) {
@@ -379,7 +379,7 @@ array.forEach(print); // Prints 0, 1, 2, 3
 
 `.filter` allows us to create a new array based on another array and a _predicate_ function that returns boolean.
 
-```
+```javascript
 const array = [0, 1, 2, 3];
 
 const newArray = array.filter((item) => {
@@ -394,7 +394,7 @@ console.log(newArray); // prints 2, 3
 
 `.map` allows us to create a new array from another array and a function that describes how to change each element.
 
-```
+```javascript
 const array = [0, 1, 2, 3];
 
 const newArray = array.map((item) => {
@@ -408,7 +408,7 @@ console.log(newArray); // prints 10, 11, 12, 13
 
 `.find` allows us to find a value in the array using a _predicate_ function that returns boolean. It returns a first found value. If the value was not found, it returns `undefined`.
 
-```
+```javascript
 const people = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 30 },
@@ -433,7 +433,7 @@ console.log(alice.age); // throws an error, because undefined does not have the 
 Since it returns undefined, usually we always check that we actually found the value:
 
 
-```
+```javascript
 const people = [
   { name: "Alice", age: 25 },
   { name: "Bob", age: 30 },
@@ -457,6 +457,6 @@ if (alice !== undefined) {
 
 `document.getElementById` is used to get a reference to HTML element that has a specified id. Returns `undefined` if there is no such element.
 
-```
+```javascript
 const app = document.getElementById("app");
 ```
